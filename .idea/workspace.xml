@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4734846-9e25-45e0-85f3-edf9389be3f9" name="Changes" comment="Add code checks">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
+    <list default="true" id="a4734846-9e25-45e0-85f3-edf9389be3f9" name="Changes" comment="Initial commit (2)">
+      <change afterPath="$PROJECT_DIR$/DurakAIGame/ai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DurakAIGame/card.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DurakAIGame/deck.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DurakAIGame/player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DurakAIGame/trump.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DurakAIGame/turns.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DurakAIGame/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DurakAIGame/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +39,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -54,37 +70,22 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="QodanaCIConfigService">
-    <option name="ciType" value="GITHUB" />
-    <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
-  </component>
   <component name="QodanaCloudProjectLink">
-    <option name="lastReportId" value="Mgb8Y" />
+    <option name="lastReportId" value="KrBYm" />
     <option name="linkedProjectId" value="AaM8r" />
     <option name="linkedProjectName" value="DurakAIGame" />
     <option name="organizationId" value="zMObJ" />
     <option name="userId" value="p4BV4" />
-  </component>
-  <component name="QodanaHighlightedReportService">
-    <option name="cloudReportPersistedInfo">
-      <CloudReportPersistedInfo>
-        <option name="projectId" value="AaM8r" />
-        <option name="reportId" value="Mgb8Y" />
-      </CloudReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -132,6 +133,11 @@
       <option name="presentableId" value="Default" />
       <updated>1703808585988</updated>
       <workItem from="1703808590985" duration="3025000" />
+      <workItem from="1703815424820" duration="164000" />
+      <workItem from="1703815597238" duration="73000" />
+      <workItem from="1703815679648" duration="81000" />
+      <workItem from="1703815771532" duration="4333000" />
+      <workItem from="1703900199466" duration="4263000" />
     </task>
     <task id="LOCAL-00001" summary="Create DurakAIGame">
       <option name="closed" value="true" />
@@ -149,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703811636499</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add code checks">
+      <option name="closed" value="true" />
+      <created>1703812377890</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703812377890</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial commit (2)">
+      <option name="closed" value="true" />
+      <created>1703812468854</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703812468854</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,9 +180,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create DurakAIGame" />
     <MESSAGE value="Add code checks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add code checks" />
+    <MESSAGE value="Initial commit (2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit (2)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DurakAIGame$main.coverage" NAME="main Coverage Results" MODIFIED="1703809955525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DurakAIGame$main.coverage" NAME="main Coverage Results" MODIFIED="1703978421049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
