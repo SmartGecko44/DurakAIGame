@@ -9,8 +9,13 @@ from turns import player_attacked
 
 try:
     # Get the number of players from the user
-    num_players = int(input("Enter the number of players: "))
-    cards_per_player = int(input("Enter the number of cards per player: "))
+    while True:
+        num_players = int(input("Enter the number of players: "))
+        cards_per_player = int(input("Enter the number of cards per player: "))
+        if num_players * cards_per_player > 52:
+            print("Not enough cards in the deck!")
+        else:
+            break
     while True:
         direction = int(input("Enter the direction of the game (clockwise (1) or counterclockwise (2)): "))
         if direction == 1 or direction == 2:
@@ -22,6 +27,14 @@ except ValueError:
     exit()
 # Create a deck
 deck = Deck()
+
+# Make sure no values are undefined
+if num_players is None:
+    num_players = 4
+if cards_per_player is None:
+    cards_per_player = 6
+if direction is None:
+    direction = 1
 
 # Create players based on the user's input
 players = [Player(f"Player {i + 1}") for i in range(num_players)]
