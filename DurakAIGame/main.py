@@ -1,32 +1,25 @@
 import random
 import time
-import ai
 
-from DurakAIGame.trump import determine_trump_suit
-from deck import Deck
-from player import Player
-from turns import player_attacked
+from DurakAIGame import ai
 
-try:
-    # Get the number of players from the user
-    while True:
-        num_players = int(input("Enter the number of players: "))
-        cards_per_player = int(input("Enter the number of cards per player: "))
-        if num_players * cards_per_player > 52:
-            print("Not enough cards in the deck!")
-        else:
-            break
-    while True:
-        direction = int(input("Enter the direction of the game (clockwise (1) or counterclockwise (2)): "))
-        if direction == 1 or direction == 2:
-            break
-        else:
-            print("Invalid input!")
-except ValueError:
-    print("Invalid input!")
+from DurakAIGame import trump
+from DurakAIGame import deck
+from DurakAIGame import player
+from DurakAIGame import turns
+from DurakAIGame import initialize
+
+if __name__ == '__main__':
+    pass
+else:
+    print("This file is not supposed to be imported!")
     exit()
+
+# Get the user's settings
+num_players, cards_per_player, direction = initialize.get_user_settings(None, None, None)
+
 # Create a deck
-deck = Deck()
+deck = deck.Deck()
 
 # Make sure no values are undefined
 if num_players is None:
@@ -36,13 +29,8 @@ if cards_per_player is None:
 if direction is None:
     direction = 1
 
-# Create players based on the user's input
-players = [Player(f"Player {i + 1}") for i in range(num_players)]
-for Player in players:
-    if Player.name == "Player 1":
-        Player.type = "Player"
-    else:
-        Player.type = "AI"
+# Initialize the players
+players = initialize.initialize_players(num_players, player.Player)
 
 # Deal cards to each player
 for player in players:
@@ -54,7 +42,7 @@ for player in players:
     print(f"{player.name}'s hand: {' ,'.join([card.rank + ' of ' + card.suit for card in player.hand])}")
 
 # Determine the trump suit
-trump_suit = determine_trump_suit()
+trump_suit = trump.determine_trump_suit()
 
 # Find the lowest trump card and set the starting player
 lowest_trump_card = None
@@ -97,7 +85,7 @@ if starting_player.type == "Player":
     print("Your hand:")
     for i, card in enumerate(starting_player.hand, start=1):
         print(f"{i}. {card.rank} of {card.suit}")
-        time.sleep(6 / cards_per_player)
+        time.sleep(6 / len(starting_player.hand))
 
     selected_card_number = int(input("Which card do you want to play? "))
 
@@ -146,6 +134,6 @@ while True:
         if player_to_attack.type != "Player":
             ai.ai_turn_attacked()
         else:
-            player_attacked()
+            turns.player_attacked(played_cards, player_to_attack)
     else:
         break
