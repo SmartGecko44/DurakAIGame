@@ -1,8 +1,10 @@
+import time
+import warnings
 from typing import List, Tuple
 from DurakAIGame import player
 
 
-class InvalidDirectionError(Exception):
+class InvalidDirectionWarning(Warning):
     pass
 
 
@@ -27,16 +29,15 @@ def get_user_settings(num_players_input, cards_per_player_input, direction_input
             direction = direction_input
 
         if num_players * cards_per_player > 52:
-            print("Not enough cards in the deck!")
-            return get_user_settings(num_players_input, cards_per_player_input, direction_input)
+            warnings.warn("Not enough cards!", RuntimeWarning)
+            return 4, 6, 1
 
         if direction != 1 and direction != 2:
-            raise InvalidDirectionError("Invalid direction!")
+            warnings.warn("Invalid direction!", RuntimeWarning)
+            return 4, 6, 1
 
     except ValueError:
-        print("Invalid input!")
-        return 4, 6, 1
-    except InvalidDirectionError:
+        warnings.warn("Invalid input!", RuntimeWarning)
         return 4, 6, 1
 
     return num_players, cards_per_player, direction
