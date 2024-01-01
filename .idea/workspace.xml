@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4734846-9e25-45e0-85f3-edf9389be3f9" name="Changes" comment="Add unit tests, update .gitignore">
+    <list default="true" id="a4734846-9e25-45e0-85f3-edf9389be3f9" name="Changes" comment="Fix unit tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DurakAIGame/initialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/DurakAIGame/initialize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/setting_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/setting_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +42,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,7 +64,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python tests.Python tests in setting_test.py.executor": "Run",
+    "Python tests.Python tests in setting_test.py.executor": "Coverage",
     "Python tests.pytest for setting_test.TestDurakGame.test_get_user_settings.executor": "Coverage",
     "Python tests.pytest for setting_test.TestDurakGame.test_initialize_players.executor": "Run",
     "Python.main.executor": "Coverage",
@@ -87,7 +86,7 @@
     <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
   </component>
   <component name="QodanaCloudProjectLink">
-    <option name="lastReportId" value="mMbr0" />
+    <option name="lastReportId" value="5lGyr" />
     <option name="linkedProjectId" value="AaM8r" />
     <option name="linkedProjectName" value="DurakAIGame" />
     <option name="organizationId" value="zMObJ" />
@@ -97,7 +96,7 @@
     <option name="cloudReportPersistedInfo">
       <CloudReportPersistedInfo>
         <option name="projectId" value="AaM8r" />
-        <option name="reportId" value="mMbr0" />
+        <option name="reportId" value="5lGyr" />
       </CloudReportPersistedInfo>
     </option>
   </component>
@@ -109,7 +108,7 @@
       <recent name="$PROJECT_DIR$/DurakAIGame" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in setting_test.py">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="DurakAIGame" />
       <option name="ENV_FILES" value="" />
@@ -222,7 +221,7 @@
       <workItem from="1703900199466" duration="4263000" />
       <workItem from="1703979321360" duration="1282000" />
       <workItem from="1703984689925" duration="7753000" />
-      <workItem from="1704105562049" duration="1474000" />
+      <workItem from="1704105562049" duration="2093000" />
     </task>
     <task id="LOCAL-00001" summary="Create DurakAIGame">
       <option name="closed" value="true" />
@@ -280,11 +279,30 @@
       <option name="project" value="LOCAL" />
       <updated>1703992389309</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix unit tests">
+      <option name="closed" value="true" />
+      <created>1704110481176</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704110481176</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create DurakAIGame" />
@@ -293,11 +311,12 @@
     <MESSAGE value="idk" />
     <MESSAGE value="Fix settings being able to be undefined" />
     <MESSAGE value="Add unit tests, update .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests, update .gitignore" />
+    <MESSAGE value="Fix unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix unit tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DurakAIGame$main.coverage" NAME="main Coverage Results" MODIFIED="1704105693066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DurakAIGame$.coverage" NAME=" Coverage Results" MODIFIED="1704106739818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/DurakAIGame$main.coverage" NAME="main Coverage Results" MODIFIED="1704110413539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DurakAIGame$.coverage" NAME=" Coverage Results" MODIFIED="1704110381354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/DurakAIGame$pytest_for_setting_test_TestDurakGame_test_get_user_settings.coverage" NAME="pytest for setting_test.TestDurakGame.test_get_user_settings Coverage Results" MODIFIED="1704106004040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/DurakAIGame$pytest_for_setting_test_TestDurakGame_test_initialize_players.coverage" NAME="pytest for setting_test.TestDurakGame.test_initialize_players Coverage Results" MODIFIED="1704105843616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
   </component>
