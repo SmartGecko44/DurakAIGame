@@ -3,3 +3,5 @@ time
 zip
 unittest
 warnings
+tox
+pytest
