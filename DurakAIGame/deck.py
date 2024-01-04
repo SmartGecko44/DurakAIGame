@@ -11,5 +11,5 @@ class Deck:
     def deal(self, num_cards):
         return [self.cards.pop() for _ in range(num_cards)]
 
-    def getRanks(self):
+    def get_ranks(self):
         return self.ranks

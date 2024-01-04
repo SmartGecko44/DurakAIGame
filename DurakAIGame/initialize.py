@@ -46,9 +46,9 @@ def get_user_settings(num_players_input, cards_per_player_input, direction_input
 def initialize_players(num_players: int, player) -> List[player.Player]:
     # Create players based on the user's input
     players = [player(f"Player {i + 1}") for i in range(num_players)]
-    for Player in players:
-        if Player.name == "Player 1":
-            Player.type = "Player"
+    for player in players:
+        if player.name == "Player 1":
+            player.type = "Player"
         else:
-            Player.type = "AI"
+            player.type = "AI"
     return players

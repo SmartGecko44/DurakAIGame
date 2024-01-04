@@ -50,7 +50,7 @@ starting_player = None
 
 for player in players:
     for card in player.hand:
-        if card.suit == trump_suit and (lowest_trump_card is None or deck.getRanks().index(card.rank) < deck.getRanks().index(lowest_trump_card.rank)):
+        if card.suit == trump_suit and (lowest_trump_card is None or deck.get_ranks().index(card.rank) < deck.get_ranks().index(lowest_trump_card.rank)):
             lowest_trump_card = card
             starting_player = player
 if starting_player is None:
