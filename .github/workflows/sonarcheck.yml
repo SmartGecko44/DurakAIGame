@@ -26,7 +26,7 @@ jobs:
         run: tox -e py
 
       - name: Debug
-        run: ls -v
+        run: ls -v, tree
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
