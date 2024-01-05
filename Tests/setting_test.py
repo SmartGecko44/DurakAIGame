@@ -1,6 +1,6 @@
 import unittest
 from DurakAIGame.player import Player
-from DurakAIGame.initialize import get_user_settings, initialize_players
+from DurakAIGame.initialize import get_user_settings, initialize_players, InvalidDirectionWarning, NotEnoughCardsWarning
 
 
 class TestDurakGame(unittest.TestCase):
@@ -10,13 +10,16 @@ class TestDurakGame(unittest.TestCase):
             (3, 5, 2),
             (2, 4, 3),
             (-423, 24, 84),
+            (20, 20, 1),
             ("a", "b", "c"),
         ]
         expected_results = [
             (4, 6, 1),
             (3, 5, 2),
             (4, 6, 1),
-            (4, 6, 1),
+            InvalidDirectionWarning,
+            NotEnoughCardsWarning,
+            RuntimeWarning,
         ]
 
         for test_case, expected_result in zip(test_cases, expected_results):
@@ -25,8 +28,9 @@ class TestDurakGame(unittest.TestCase):
                     result = get_user_settings(*test_case)
                     self.assertEqual(result, expected_result)
                 else:
-                    with self.assertWarns(RuntimeWarning):
-                        get_user_settings(*test_case)
+                    with self.assertWarns(expected_result):
+                        result = get_user_settings(*test_case)
+                        self.assertEqual(result, (4, 6, 1))
 
     def test_initialize_players(self):
         test_cases = [4, 3, 2]  # Add more test cases as needed
