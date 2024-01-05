@@ -17,7 +17,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@main
         with:
-          python-version: ${{ matrix.python }}
+          python-version: 3.11
 
       - name: Install tox and any other packages
         run: pip install -r requirements.txt
